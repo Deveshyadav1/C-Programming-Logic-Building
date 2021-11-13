@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int arr[20],i,n;
+    FILE *ptr;
+    printf("\nEnter Your Digit :");
+    scanf("%d",&n);
+    for(i=1;i<10;i++)
+    {
+        printf("\n%d * %d = %d",n,i,n*i);
+    }
+    ptr=fopen("C:\\Users\\Devu Yadav\\Desktop\\Filenew.txt","a");
+    if(ptr==NULL)
+    {
+        printf("\nError !");
+    }
+    for(i=1;i<10;i++)
+    {
+     fprintf(ptr,"\n%d * %d = %d",n,i,n*i); 
+     
+    }
+    fprintf(ptr,"\n\n");
+    fclose(ptr);
+    return 0;
+
+    
+}
