@@ -1,0 +1,6 @@
+#include<stdio.h>
+int main()
+{
+ Printf("Begin World");
+ return 0;
+}
