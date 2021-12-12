@@ -1,0 +1,17 @@
+#include<stdio.h>
+int swap(int *a,int *b)
+{
+  int temp;
+  temp=*a;
+  *a=*b;
+  *b=temp;
+}
+int main()
+{
+    int num1=1, num2=10;
+    int *num1p,*num2p;
+    num1p=&num1;
+    num2p=&num2;
+    swap(num1p,num2p);
+    printf("1= : %d  2=: %d",*num1p,*num2p);
+}
