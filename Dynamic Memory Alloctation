@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int *ptr;
+    int i,n,sum=0,n2;
+    printf("\nEnter Your Memory Size");
+    scanf("%d",&n);
+    ptr=(int*)calloc(n,sizeof(int));
+    if(ptr==NULL)
+    {
+        printf("Error !");
+    }
+    printf("\n Memory Allocated Succesfully by Calloc\n ");
+    for(i=0;i<n;i++)
+    {
+        printf("\n [%d]: Enter Element : ",i);
+        scanf("%d",ptr+i);
+        sum+=*(ptr+i);
+    }
+    
+    printf("\n");
+    for(i=0;i<n;i++)
+    {
+        printf("\n[%d]: Element is %d ",i,*ptr+i);
+    }
+    
+    printf("\n Sum = [%d]",sum);
+    printf("\n");
+    
+    printf("\nEnter A new Memory Size");
+    scanf("%d",&n2);
+    
+    ptr=realloc(ptr,n2*sizeof(int));
+    
+    printf("\nEnter Elements in New memory :");
+    for(i=0;i<n2;i++)
+    {
+        printf("\n[%d] Enter Elements : ",i);
+        scanf("%d",ptr+i);
+    }
+    
+    sum=0;
+    printf("\n");
+    for(i=0;i<n2;i++)
+    {
+        printf("\n[%d] Element is %d",i,*ptr+i);
+        sum+=*(ptr+i);
+    }
+    printf("\n");
+    free(ptr);
+    return 0;
+}
