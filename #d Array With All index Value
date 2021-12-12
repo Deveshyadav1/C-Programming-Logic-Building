@@ -1,0 +1,59 @@
+#include<stdio.h>
+int maxelemnt(int num1)
+{
+     if(num1==0)
+        printf("\n%d",num1);
+        else
+        printf("\n\nYour logic is awsome :");
+        return 0;
+    }
+
+int main()
+{
+    
+    int arr[2][3][2],i,j,k;
+    printf("\n Enter 12 elements :");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            for(k=0;k<2;k++)
+            {
+                scanf("%d",&arr[i][j][k]);
+            }
+        }
+    }
+
+    
+    printf("\nPrinting Elements....: ");
+    printf("\n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            for(k=0;k<2;k++)
+            {
+                printf("\n");
+                printf("[%d] [%d] [%d]=%d",i,j,k,arr[i][j][k]);
+               
+            }
+        }
+    }
+
+    printf("\n");
+    printf("\nPrinting Index..[i] [j] [k]..");
+    printf("\n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            for(k=0;k<2;k++)
+            {
+                printf("\n[i][j][k]=[%d] [%d] [%d]",i,j,k);
+            }
+        }
+    }
+
+    maxelemnt(arr[0][0][0]);
+    
+}
